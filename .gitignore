@@ -1,8 +1,0 @@
-# Dependencies
-/node_modules
-
-# Build artifacts
-/dist
-
-# OS-specific
-.DS_Store
