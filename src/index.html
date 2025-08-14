@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AnyAI UI Kit - JCB Dashboard Demo</title>
+  <!-- anyai-ui-kitのCSSを読み込み -->
+  <link rel="stylesheet" href="./output.css" />
+  <!-- ReactをCDNから読み込み -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- BabelをCDNから読み込み (JSXをブラウザで解釈するため) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-type="module">
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    
+    // JCBダッシュボードコンポーネントをインポート
+    // 注意: Framer MotionとRechartsは別途読み込む必要がありますが、
+    // このデモではまずコンポーネントが描画されることを確認します。
+    // そのため、一部機能（アニメーションやグラフ）は動作しない可能性があります。
+    import JCBDashboardDemo from './components/JCB_Dashboard.jsx';
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(
+      <React.StrictMode>
+        <JCBDashboardDemo />
+      </React.StrictMode>
+    );
+  </script>
+</body>
+</html>
